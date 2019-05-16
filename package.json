@@ -1,22 +1,56 @@
 {
-  "name": "electron-quick-start",
+  "name": "electron-zgi",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "packageDarwin": "electron-packager . 'ZGI' --platform=darwin --arch=x64 --icon=build/icons/icon.icns --out=./dist --asar --app-version=2.0.1 --ignore=\"(dist|src|docs|.gitignore|LICENSE|README.md|webpack.config*|node_modules)\""
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/rxlisbest/electron-zgi",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Electron"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Roy",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^5.0.0"
+  },
+  "build": {
+    "productName": "electron-zgi",
+    "appId": "net.ruixinglong.chint",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "dist/electron/**/*"
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "mac": {
+      "icon": "build/icons/icon.icns"
+    },
+    "win": {
+      "icon": "build/icons/icon.ico"
+    },
+    "linux": {
+      "icon": "build/icons"
+    }
+  },
+  "dependencies": {
+    "electron-packager": "^13.1.1"
   }
 }

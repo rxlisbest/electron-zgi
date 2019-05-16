@@ -1,0 +1,31 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>PDF</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/pdf.css">
+    <script type="text/javascript">
+      window.$ = window.jQuery = require('./scripts/jquery.js');
+    </script>
+    <script src="scripts/vendor/modernizr.js"></script>
+</head>
+<body>
+<iframe id="my-iframe" src="" width="100%" height="100%">
+</iframe>
+<script src="scripts/vendor.js"></script>
+<script src="scripts/plugins.js"></script>
+<script src="scripts/main.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+        var path = GetQueryString('path');
+        if(path){
+            var src = "pdfjs/web/viewer.html?file=../../file" + path;
+            $("#my-iframe").attr("src", src);
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>LIST</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/list.css">
+    <script type="text/javascript">
+      window.$ = window.jQuery = require('./scripts/jquery.js');
+    </script>
+    <script src="scripts/vendor/modernizr.js"></script>
+</head>
+<body>
+<div class="list-header">
+    <div class="list-header-inner"></div>
+</div>
+<div class="list-line"></div>
+<div class="list-body" id="box">
+    <template v-for="(v, k) in list">
+        <div class="list-body-line"></div>
+        <div class="list-body-row">
+            <div class="list-body-row-item" v-for="(vv, kk) in v">
+                <div class="list-body-row-item-image">
+                    <a v-if="type == 'video'" v-bind:href="'video.html?src=' + vv.src">
+                        <img v-bind:src="vv.cover_src" />
+                    </a>
+                    <a v-else-if="type == 'pdf_list'" v-bind:href="'list.html?type=product&num=' + vv.id">
+                        <img v-bind:src="vv.cover_src" />
+                    </a>
+                    <a v-else v-bind:href="'pdf.html?path=' + vv.src">
+                        <img v-bind:src="vv.cover_src" />
+                    </a>
+                </div>
+                <div class="list-body-row-item-title">
+                    <p v-text="vv.name"></p>
+                </div>
+                <div class="list-body-row-item-go">
+                    <div class="list-body-row-item-go-icon">
+                        <img v-if="type == 'video'" src="images/list/icon_video.png" />
+                        <img v-else src="images/list/icon_pdf.png" />
+                    </div>
+                    <a v-if="type == 'video'" v-bind:href="'video.html?src=' + vv.src">
+                        <div class="list-body-row-item-go-button">
+                            <p>CLICK PLAY</p>
+                        </div>
+                    </a>
+                    <a v-else-if="type == 'pdf_list'" v-bind:href="'list.html?type=product&num=' + vv.id">
+                        <div class="list-body-row-item-go-button">
+                            <p>CLICK OPEN</p>
+                        </div>
+                    </a>
+                    <a v-else v-bind:href="'pdf.html?path=' + vv.src">
+                        <div class="list-body-row-item-go-button">
+                            <p>CLICK OPEN</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </template>
+    <div class="clear"></div>
+</div>
+<div class="list-line"></div>
+<div class="list-footer">
+    <a href="javascript:history.back(-1)">
+        <div class="list-footer-return">
+            <img src="images/list/button_return.png" />
+        </div>
+    </a>
+    <div class="list-footer-bottom-1"></div>
+    <div class="list-footer-bottom-2"></div>
+</div>
+<script src="scripts/vendor.js"></script>
+<script src="scripts/plugins.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/vue.js"></script>
+<script src="scripts/sweetalert.min.js"></script>
+<link rel="stylesheet" href="styles/sweetalert.css">
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+        var app = new Vue({
+            el: '#box',
+            data: {
+                list: [],
+                type: ''
+            },
+            methods: {
+                init: function () {
+                    var _this = this;
+                    var type = GetQueryString('type');
+                    var num = GetQueryString('num') || '';
+                    if (num) {
+                        type = type + '-' + num
+                    }
+                    if(type){
+                        _this.type = type;
+                        var url = 'data/' + type + '.json';
+                        $.ajax({
+                            type: 'GET',
+                            url: url,
+                            dataType: "json",
+                            success:function(data){
+                                _this.list = data;
+                            },
+                            error:function(){
+                                //请求出错处理
+                                sweetAlert("", "数据错误", "error");
+                            }
+                        });
+                    }
+                }
+            }
+        });
+        app.init();
+    });
+</script>
+</body>
+</html>
