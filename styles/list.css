@@ -19,7 +19,7 @@ html,body{
     width: 90%;
     background: #FFFFFF;
     height: 64%;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
 }
 .list-body-row{
     width: 100%;
