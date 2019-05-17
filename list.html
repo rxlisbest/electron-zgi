@@ -12,6 +12,11 @@
       window.$ = window.jQuery = require('./scripts/jquery.js');
     </script>
     <script src="scripts/vendor/modernizr.js"></script>
+    <style type="text/css">
+        .list-body {
+            padding-bottom: 50px;
+        }
+    </style>
 </head>
 <body>
 <div class="list-header">
@@ -35,7 +40,7 @@
                     </a>
                 </div>
                 <div class="list-body-row-item-title">
-                    <p v-text="vv.name"></p>
+                    <div v-text="vv.name"></div>
                 </div>
                 <div class="list-body-row-item-go">
                     <div class="list-body-row-item-go-icon">
@@ -44,17 +49,17 @@
                     </div>
                     <a v-if="type == 'video'" v-bind:href="'video.html?src=' + vv.src">
                         <div class="list-body-row-item-go-button">
-                            <p>CLICK PLAY</p>
+                            <div>点击打开</div>
                         </div>
                     </a>
                     <a v-else-if="type == 'pdf_list'" v-bind:href="'list.html?type=product&num=' + vv.id">
                         <div class="list-body-row-item-go-button">
-                            <p>CLICK OPEN</p>
+                            <div>点击打开</div>
                         </div>
                     </a>
                     <a v-else v-bind:href="'pdf.html?path=' + vv.src">
                         <div class="list-body-row-item-go-button">
-                            <p>CLICK OPEN</p>
+                            <div>点击打开</div>
                         </div>
                     </a>
                 </div>

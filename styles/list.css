@@ -19,7 +19,8 @@ html,body{
     width: 90%;
     background: #FFFFFF;
     height: 64%;
-    /*overflow-y: scroll;*/
+    overflow: hidden;
+    overflow-y: scroll;
 }
 .list-body-row{
     width: 100%;
@@ -56,13 +57,14 @@ html,body{
     text-overflow:ellipsis;
     white-space: nowrap;
 }
-.list-body-row-item .list-body-row-item-title p{
+.list-body-row-item .list-body-row-item-title div{
     /*width: 50px;*/
     /*display: table-cell;*/
+    height: 80%;
     vertical-align: middle;
     text-align: center;
     color: #666666;
-    font-size:8px;
+    font-size: 200%;
     -webkit-transform:scale(0.8);
     overflow:hidden;
     text-overflow:ellipsis;
@@ -80,12 +82,13 @@ html,body{
     margin-right: 5%;
     display: table;
 }
-.list-body-row-item-go-button p{
+.list-body-row-item-go-button div{
+    height: 80%;
     display: table-cell;
     vertical-align: middle;
     text-align: center;
     color: #666666;
-    font-size:8px;
+    font-size: 200%;
     -webkit-transform:scale(0.8);
     overflow:hidden;
     text-overflow:ellipsis;
