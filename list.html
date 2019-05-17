@@ -15,6 +15,7 @@
     <style type="text/css">
         .list-body {
             padding-bottom: 50px;
+            overflow-y: scroll;
         }
     </style>
 </head>
@@ -30,13 +31,13 @@
             <div class="list-body-row-item" v-for="(vv, kk) in v">
                 <div class="list-body-row-item-image">
                     <a v-if="type == 'video'" v-bind:href="'video.html?src=' + vv.src">
-                        <img v-bind:src="vv.cover_src" />
+                        <img v-bind:src="vv.cover_src" onerror="this.src='images/list/default.png';this.onerror=null" />
                     </a>
                     <a v-else-if="type == 'pdf_list'" v-bind:href="'list.html?type=product&num=' + vv.id">
-                        <img v-bind:src="vv.cover_src" />
+                        <img v-bind:src="vv.cover_src" onerror="this.src='images/list/default.png';this.onerror=null" />
                     </a>
                     <a v-else v-bind:href="'pdf.html?path=' + vv.src">
-                        <img v-bind:src="vv.cover_src" />
+                        <img v-bind:src="vv.cover_src" onerror="this.src='images/list/default.png';this.onerror=null" />
                     </a>
                 </div>
                 <div class="list-body-row-item-title">

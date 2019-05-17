@@ -20,7 +20,6 @@ html,body{
     background: #FFFFFF;
     height: 64%;
     overflow: hidden;
-    overflow-y: scroll;
 }
 .list-body-row{
     width: 100%;
