@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "electron .",
     "build:mac": "electron-packager . 'ZGI' --platform=darwin --arch=x64 --icon=build/icons/icon.icns --out=./dist --asar --app-version=1.0.0 --ignore=\"(dist|src|docs|.gitignore|LICENSE|README.md|webpack.config*|node_modules)\"",
-    "build:win": "electron-packager . 'ZGI' --platform=win32 --arch=x64 --icon=build/icons/icon.ico --out=./dist --asar --app-version=1.0.0 --ignore=\"(dist|src|docs|.gitignore|LICENSE|README.md|webpack.config*|node_modules)\""
+    "build:win": "electron-packager . 正基电气 --platform=win32 --arch=x64 --icon=build/icons/icon.ico --out=./dist --asar --app-version=1.0.0 --ignore=\"(dist|src|docs|.gitignore|LICENSE|README.md|webpack.config*|node_modules)\""
   },
   "repository": "https://github.com/rxlisbest/electron-zgi",
   "keywords": [
