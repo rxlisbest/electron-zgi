@@ -1,24 +1,24 @@
 [
   [
-    {"name": "ZPT直插式接线端子ZST回拉式弹簧接线端子", "src": "/product/1.pdf", "cover_src": "/images/product/1.png"},
-    {"name": "ZT螺钉接线端子", "src": "/product/2.pdf", "cover_src": "/images/product/2.png"},
-    {"name": "ZK螺钉接线端子", "src": "/product/3.pdf", "cover_src": "/images/product/3.png"},
-    {"name": "ZSK螺钉接线端子", "src": "/product/4.pdf", "cover_src": "/images/product/4.png"}
+    {"name": "ZPT直插式接线端子ZST回拉式弹簧接线端子", "src": "/product/1.pdf", "cover_src": "images/product/1.png"},
+    {"name": "ZT螺钉接线端子", "src": "/product/2.pdf", "cover_src": "images/product/2.png"},
+    {"name": "ZK螺钉接线端子", "src": "/product/3.pdf", "cover_src": "images/product/3.png"},
+    {"name": "ZSK螺钉接线端子", "src": "/product/4.pdf", "cover_src": "images/product/4.png"}
   ],
   [
-    {"name": "ZH1A螺钉板式接线端子", "src": "/product/5.pdf", "cover_src": "/images/product/5.png"},
-    {"name": "ZPDB模块式分线端子", "src": "/product/6.pdf", "cover_src": "/images/product/6.png"},
-    {"name": "ZTC螺钉直压大电流接线端子", "src": "/product/7.pdf", "cover_src": "/images/product/7.png"},
-    {"name": "ZWFF螺柱接线端子", "src": "/product/8.pdf", "cover_src": "/images/product/8.png"}
+    {"name": "ZH1A螺钉板式接线端子", "src": "/product/5.pdf", "cover_src": "images/product/5.png"},
+    {"name": "ZPDB模块式分线端子", "src": "/product/6.pdf", "cover_src": "images/product/6.png"},
+    {"name": "ZTC螺钉直压大电流接线端子", "src": "/product/7.pdf", "cover_src": "images/product/7.png"},
+    {"name": "ZWFF螺柱接线端子", "src": "/product/8.pdf", "cover_src": "images/product/8.png"}
   ],
   [
-    {"name": "模块式小母线接线端子", "src": "/product/9.pdf", "cover_src": "/images/product/9.png"},
-    {"name": "安装屏切换片", "src": "/product/10.pdf", "cover_src": "/images/product/10.png"},
-    {"name": "熔断器", "src": "/product/11.pdf", "cover_src": "/images/product/11.png"},
-    {"name": "超薄继电器", "src": "/product/12.pdf", "cover_src": "/images/product/12.png"}
+    {"name": "模块式小母线接线端子", "src": "/product/9.pdf", "cover_src": "images/product/9.png"},
+    {"name": "安装屏切换片", "src": "/product/10.pdf", "cover_src": "images/product/10.png"},
+    {"name": "熔断器", "src": "/product/11.pdf", "cover_src": "images/product/11.png"},
+    {"name": "超薄继电器", "src": "/product/12.pdf", "cover_src": "images/product/12.png"}
   ],
   [
-    {"name": "端子式光电耦合器", "src": "/product/13.pdf", "cover_src": "/images/product/13.png"},
-    {"name": "支架式继电器模组", "src": "/product/14.pdf", "cover_src": "/images/product/14.png"}
+    {"name": "端子式光电耦合器", "src": "/product/13.pdf", "cover_src": "images/product/13.png"},
+    {"name": "支架式继电器模组", "src": "/product/14.pdf", "cover_src": "images/product/14.png"}
   ]
 ]
