@@ -2,6 +2,9 @@
 const {app, BrowserWindow} = require('electron')
 const electron = require('electron')
 
+const HttpServer = require('http-server')
+HttpServer.createServer({root: '/Users/apple/Downloads'}).listen(8088)
+
 console.log(app.getAppPath())
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -18,7 +21,7 @@ function createWindow () {
       nodeIntegration: true
     },
     resizable: false,
-    fullscreen: true
+    fullscreen: false
   })
 
   // and load the index.html of the app.
